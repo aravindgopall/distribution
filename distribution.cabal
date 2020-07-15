@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2c5596ca6f21ffc9ea412063c0fbfff2decc3ce0d5d54e7587092e33f9baf2d7
+-- hash: 633393f2bdd7b1de3328608c9b551fdf49581b607b28b2f8edbe198361f19353
 
 name:           distribution
 version:        0.1.0.0
@@ -27,13 +27,14 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Distribution
   other-modules:
       Paths_distribution
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , random
   default-language: Haskell2010
 
 executable distribution-exe
@@ -46,6 +47,7 @@ executable distribution-exe
   build-depends:
       base >=4.7 && <5
     , distribution
+    , random
   default-language: Haskell2010
 
 test-suite distribution-test
@@ -59,4 +61,5 @@ test-suite distribution-test
   build-depends:
       base >=4.7 && <5
     , distribution
+    , random
   default-language: Haskell2010
